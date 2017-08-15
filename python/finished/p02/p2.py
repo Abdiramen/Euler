@@ -5,5 +5,6 @@ def fib(x):
     while a < x:
         yield a
         a, b = b, b+a
+        print(a)
 
 print(sum(filter(lambda x: x % 2 == 0, fib(4000000))))
