@@ -7,17 +7,14 @@ import (
 
 func is_prime(x int) bool{
   n := int(math.Ceil(math.Sqrt(float64(x))))
-  i := 2
   if x == 2 {
     return true
   }
 
-  for i <= n {
+  for i := 2; i <= n; i ++ {
     if x % i == 0 {
         return false
     }
-
-    i += 1
   }
 
   return true
