@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+
 def factor(num, primes):
     factors = []
     for i in primes:
@@ -8,6 +10,7 @@ def factor(num, primes):
             if num == 1:
                 break
     return factors
+
 
 if __name__ == "__main__":
     n = int(input("n = "))

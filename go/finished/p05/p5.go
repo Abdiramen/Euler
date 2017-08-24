@@ -21,17 +21,17 @@ func main(){
   prod := 1
   for i := 2; i <= 20; i++ {
     if isprime(i) {
-      primes = append(primes, i) } else {
-      composites= append(composites, i) }
+      primes = append( primes, i ) } else {
+      composites= append( composites, i) }
   }
-  for i := 0; i<len(primes); i++ {
-    powers = append(powers, 1)
+  for i := 0; i<len( primes ); i++ {
+    powers = append( powers, 1 )
   }
   for _, c := range composites {
     for i, p := range primes {
       if c % p == 0 {
         for count := 1; c != 1; count++ {
-          c = int( c / p)
+          c = int( c / p )
           if powers[i] < count { powers[i] = count }
         }
       }

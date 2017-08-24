@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# sum of even valued fib terms
 def fib(x):
     a, b = 1, 0
     while a < x:
