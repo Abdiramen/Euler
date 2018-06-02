@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-def gen():
-    num = 1
-    while True:
-        num += 2
-        if all( num % i != 0 for i in range(2,num)):
-            yield num
-        #yield num
+from math import sqrt
 
-prime = 0
-g = gen()
-for i in range(1,6):
-    prime = next(g)
-    print(prime, i)
-print(prime)
+
+def primes():
+    prime = 1
+    count = 1
+    while True:
+        prime += 2
+        if all(prime % i for i in range(2, int(sqrt(prime)+1))):
+            count += 1
+            yield count, prime
+        if count == 10001:
+            return prime
+
+
+for p in primes():
+    print(p)
